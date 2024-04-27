@@ -1,8 +1,10 @@
-import br.com.edu.ObjProjeto.calculos.CalculadoraDeTempo;
-import br.com.edu.ObjProjeto.calculos.FiltroRecomendacao;
-import br.com.edu.ObjProjeto.modelos.Episodio;
-import br.com.edu.ObjProjeto.modelos.Filme;
-import br.com.edu.ObjProjeto.modelos.Serie;
+import br.com.edu.screenmatch.calculos.CalculadoraDeTempo;
+import br.com.edu.screenmatch.calculos.FiltroRecomendacao;
+import br.com.edu.screenmatch.modelos.Episodio;
+import br.com.edu.screenmatch.modelos.Filme;
+import br.com.edu.screenmatch.modelos.Serie;
+
+import java.util.ArrayList;
 
 public class Principal {
 
@@ -54,5 +56,21 @@ public class Principal {
         meuEpisodio.setTotalVizualizacoes(8400);
         filtro.filtra(meuEpisodio);
 
+        Filme terceiroFilme = new Filme();
+        terceiroFilme.setNome("Guardiões da Galáxia");
+        terceiroFilme.setDuracaoEmMinutos(121);
+        terceiroFilme.setAnoDeLancamento(2014);
+        terceiroFilme.avalia(10);
+
+        ArrayList<Filme> listaDeFilmes = new ArrayList<>();
+        listaDeFilmes.add(meuFilme);
+        listaDeFilmes.add(outroFilme);
+        listaDeFilmes.add(terceiroFilme);
+        System.out.println("Tamanho da lista: " + listaDeFilmes.size());
+        System.out.println("Primeiro filme: " + listaDeFilmes.get(0).getNome());
+        for (int i = 0; i < listaDeFilmes.size(); i++) {
+            System.out.println(listaDeFilmes.get(i).getNome());
+        }
+        System.out.println("toString do filme: " + listaDeFilmes.get(2).toString());
     }
 }

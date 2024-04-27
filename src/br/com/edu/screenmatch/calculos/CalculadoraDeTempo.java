@@ -1,6 +1,6 @@
-package br.com.edu.ObjProjeto.calculos;
+package br.com.edu.screenmatch.calculos;
 
-import br.com.edu.ObjProjeto.modelos.Titulo;
+import br.com.edu.screenmatch.modelos.Titulo;
 
 public class CalculadoraDeTempo {
 

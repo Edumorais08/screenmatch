@@ -1,4 +1,4 @@
-package br.com.edu.ObjProjeto.calculos;
+package br.com.edu.screenmatch.calculos;
 
 public class FiltroRecomendacao {
 

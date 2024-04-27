@@ -1,6 +1,6 @@
-package br.com.edu.ObjProjeto.modelos;
+package br.com.edu.screenmatch.modelos;
 
-import br.com.edu.ObjProjeto.calculos.Classificavel;
+import br.com.edu.screenmatch.calculos.Classificavel;
 
 public class Episodio implements Classificavel {
 

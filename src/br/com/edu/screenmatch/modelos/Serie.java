@@ -1,4 +1,4 @@
-package br.com.edu.ObjProjeto.modelos;
+package br.com.edu.screenmatch.modelos;
 
 public class Serie extends Titulo {
     private int temporadas;

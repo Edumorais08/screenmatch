@@ -1,4 +1,4 @@
-package br.com.edu.ObjProjeto.modelos;
+package br.com.edu.screenmatch.modelos;
 
 public class Titulo {
     private String nome;
