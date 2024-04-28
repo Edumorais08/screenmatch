@@ -9,9 +9,8 @@ import java.util.ArrayList;
 public class Principal {
 
     public static void main(String[] args) {
-        Filme meuFilme = new Filme();
 
-        meuFilme.setNome("Janela Indiscreta");
+        Filme meuFilme = new Filme("Janela Indiscreta", 1954);
         meuFilme.setAnoDeLancamento(1954);
         meuFilme.setDuracaoEmMinutos(112);
         meuFilme.setIncluidoNoPlano(true);
@@ -24,20 +23,14 @@ public class Principal {
         System.out.println("Total de avaliações: " + meuFilme.getTotalDeAvaliacoes());
         System.out.println("A nota média é: " + meuFilme.pegaMedia());
 
-        Serie minhaserie = new Serie();
-
-        minhaserie.setNome("Modern Family");
-        minhaserie.setAnoDeLancamento(2009);
+        Serie minhaserie = new Serie("Modern Family", 2009);
         minhaserie.exibeFichaTecnica();
         minhaserie.setTemporadas(11);
         minhaserie.setEpisodiosPorTemporada(23);
         minhaserie.setMinutosPorEpisodio(21);
         System.out.println("Duração para maratonar Modern Family: " + minhaserie.getDuracaoEmMinutos());
 
-        Filme outroFilme = new Filme();
-
-        outroFilme.setNome("La La Land");
-        outroFilme.setAnoDeLancamento(2016);
+        Filme outroFilme = new Filme("La La Land",2016);
         outroFilme.setDuracaoEmMinutos(129);
 
         CalculadoraDeTempo calculadora = new CalculadoraDeTempo();
@@ -56,10 +49,10 @@ public class Principal {
         meuEpisodio.setTotalVizualizacoes(8400);
         filtro.filtra(meuEpisodio);
 
-        Filme terceiroFilme = new Filme();
-        terceiroFilme.setNome("Guardiões da Galáxia");
+        var terceiroFilme = new Filme("Guardiões da Galáxia", 2014);
+//        terceiroFilme.setNome("Guardiões da Galáxia");
         terceiroFilme.setDuracaoEmMinutos(121);
-        terceiroFilme.setAnoDeLancamento(2014);
+//        terceiroFilme.setAnoDeLancamento(2014);
         terceiroFilme.avalia(10);
 
         ArrayList<Filme> listaDeFilmes = new ArrayList<>();
@@ -68,9 +61,10 @@ public class Principal {
         listaDeFilmes.add(terceiroFilme);
         System.out.println("Tamanho da lista: " + listaDeFilmes.size());
         System.out.println("Primeiro filme: " + listaDeFilmes.get(0).getNome());
-        for (int i = 0; i < listaDeFilmes.size(); i++) {
-            System.out.println(listaDeFilmes.get(i).getNome());
+        for (Filme listaDeFilme : listaDeFilmes) {
+            System.out.println(listaDeFilme.getNome());
         }
         System.out.println("toString do filme: " + listaDeFilmes.get(2).toString());
+
     }
 }
