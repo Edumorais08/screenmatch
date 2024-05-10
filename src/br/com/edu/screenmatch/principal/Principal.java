@@ -1,3 +1,5 @@
+package br.com.edu.screenmatch.principal;
+
 import br.com.edu.screenmatch.calculos.CalculadoraDeTempo;
 import br.com.edu.screenmatch.calculos.FiltroRecomendacao;
 import br.com.edu.screenmatch.modelos.Episodio;
